@@ -1,4 +1,5 @@
 from distutils.core import setup, Extension
+import numpy
 
 ## \file setup.py setup.py
 #  \brief The python script for building proteus
@@ -13,19 +14,18 @@ cv["OPT"] = cv["OPT"].replace("-O3","-g")
 cv["CFLAGS"] = cv["CFLAGS"].replace("-DNDEBUG","-DDEBUG")
 cv["CFLAGS"] = cv["CFLAGS"].replace("-O3","-g")
 
-setup(name='proteus-dummy',
+setup(name='proteusDummy',
       version='1.0.0',
       description='Python tools for multiphysics modeling',
       author='Chris Kees',
       author_email='christopher.e.kees@usace.army.mil',
       url='https://adh.usace.army.mil/proteus',
-      packages = ['proteus-dummy'],
-      ext_package='proteus-dummy',
+      packages = ['proteusDummy'],
+      ext_package='proteusDummy',
       ext_modules=[Extension('cshockCapturing',
-                             ['proteus-dummy/cshockCapturingModule.c','proteus-dummy/shockCapturing.c'],
+                             ['proteusDummy/cshockCapturingModule.c','proteusDummy/shockCapturing.c'],
                              include_dirs=[numpy.get_include(),'include'],
-                             libraries=['m'],
-                             extra_compile_args=PROTEUS_EXTRA_COMPILE_ARGS,
-                             extra_link_args=PROTEUS_EXTRA_LINK_ARGS),
+                             libraries=['m']),
                    ],
+      requires=['numpy']
       )
