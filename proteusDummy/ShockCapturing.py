@@ -383,5 +383,3 @@ class ResGradFFDarcyDelayLag_SC(ResGradFFDarcy_SC):
             for ci in range(self.nc):
                 self.numDiff_last.append(self.cq_numDiff[ci])
                 self.numDiff.append(numpy.zeros(self.cq_numDiff[ci].shape,'d'))
-                
-
