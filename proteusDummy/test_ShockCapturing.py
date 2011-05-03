@@ -5,7 +5,7 @@ def testDummmy():
         def __init__(self):
             self.nc = 1
     cd = ConstantDiffusion_SC(coefficients=C(),nd=3,shockCapturingFactor=0.25,lag=True)
-    print "hello test"
+    print "hello test 1"
     assert(True)
 
 def testDummmy2():
@@ -13,7 +13,7 @@ def testDummmy2():
         def __init__(self):
             self.nc = 1
     cd = ConstantDiffusion_SC(coefficients=C(),nd=3,shockCapturingFactor=0.25,lag=True)
-    print "hello test"
+    print "hello test 2"
     assert(True)
 
 def testDummmy3():
@@ -21,7 +21,7 @@ def testDummmy3():
         def __init__(self):
             self.nc = 1
     cd = ConstantDiffusion_SC(coefficients=C(),nd=3,shockCapturingFactor=0.25,lag=True)
-    print "hello test"
+    print "hello test 3"
     assert(True)
 
 def testDummmy4():
@@ -29,5 +29,13 @@ def testDummmy4():
         def __init__(self):
             self.nc = 1
     cd = ConstantDiffusion_SC(coefficients=C(),nd=3,shockCapturingFactor=0.25,lag=True)
-    print "hello test"
+    print "hello test 4"
+    assert(True)
+
+def testDummmy5():
+    class C:
+        def __init__(self):
+            self.nc = 1
+    cd = ConstantDiffusion_SC(coefficients=C(),nd=3,shockCapturingFactor=0.25,lag=True)
+    print "hello test 5"
     assert(True)
