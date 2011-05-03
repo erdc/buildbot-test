@@ -14,7 +14,7 @@ def testDummmy2():
             self.nc = 1
     cd = ConstantDiffusion_SC(coefficients=C(),nd=3,shockCapturingFactor=0.25,lag=True)
     print "hello test 2"
-    assert(True)
+    assert(False)#adding a failed test to see what happens
 
 def testDummmy3():
     class C:
